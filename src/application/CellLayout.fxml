@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="theColumn" disable="false" focusTraversable="false" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" pickOnBounds="true" prefHeight="-1.0" prefWidth="240.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <StackPane fx:id="stackPane" layoutX="0.0" layoutY="0.0" onMouseClicked="#onStackClicked" prefHeight="-1.0" prefWidth="-1.0">
+      <children>
+        <Pane id="tweetpane" fx:id="tweetPane" disable="false" prefHeight="-1.0" prefWidth="240.0">
+          <children>
+            <HBox fx:id="wideBox" layoutX="0.0" layoutY="0.0" minWidth="-1.0" prefHeight="-1.0" prefWidth="240.0">
+              <children>
+                <ImageView fx:id="icon" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                <BorderPane fx:id="frame" minWidth="-1.0" prefHeight="50.0" prefWidth="-1.0">
+                  <bottom>
+                    <Label fx:id="via" alignment="CENTER_LEFT" prefHeight="19.0" prefWidth="-1.0" text="via">
+                      <font>
+                        <Font size="9.0" fx:id="x1" />
+                      </font>
+                    </Label>
+                  </bottom>
+                  <center>
+                    <FlowPane prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <Label fx:id="text" mnemonicParsing="false" prefHeight="-1.0" prefWidth="190.0" text="text" textAlignment="LEFT" textOverrun="ELLIPSIS" underline="false" wrapText="true">
+                          <font>
+                            <Font size="11.0" />
+                          </font>
+                        </Label>
+                      </children>
+                    </FlowPane>
+                  </center>
+                  <top>
+                    <VBox prefHeight="-1.0" prefWidth="-1.0">
+                      <children>
+                        <Label fx:id="name" text="name" wrapText="true">
+                          <font>
+                            <Font size="10.0" fx:id="x2" />
+                          </font>
+                        </Label>
+                        <Label fx:id="id" font="$x2" text="id" textFill="#9f9f9f" wrapText="true" />
+                      </children>
+                    </VBox>
+                  </top>
+                </BorderPane>
+              </children>
+            </HBox>
+          </children>
+        </Pane>
+        <Pane fx:id="buttonPane" disable="false" prefHeight="-1.0" prefWidth="-1.0" visible="false">
+          <children>
+            <HBox alignment="CENTER" layoutX="0.0" layoutY="0.0" minHeight="50.0" prefHeight="-1.0" prefWidth="240.0">
+              <children>
+                <Button fx:id="reply" cancelButton="false" defaultButton="false" mnemonicParsing="false" onMouseClicked="#onReply" text="Rep" />
+                <Button fx:id="favolite" mnemonicParsing="false" onMouseClicked="#onFavorite" text="Fav" />
+                <Button fx:id="retweet" mnemonicParsing="false" onMouseClicked="#onRetweet" text="Ret" />
+                <Button fx:id="directMessage" mnemonicParsing="false" onMouseClicked="#onDirectMessage" text="DM" />
+              </children>
+            </HBox>
+          </children>
+        </Pane>
+      </children>
+    </StackPane>
+  </children>
+</AnchorPane>

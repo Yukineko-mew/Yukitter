@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="269.9999915527369" prefWidth="272.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.mainController">
+  <children>
+    <ImageView fx:id="icon" fitHeight="70.0" fitWidth="70.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" style="" x="0.0" y="0.0" AnchorPane.topAnchor="1.0" />
+    <TabPane fx:id="tabPane" layoutX="-1.0" layoutY="71.0" prefHeight="195.0" prefWidth="272.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab fx:id="homeTab" closable="true" disable="false" text="Home">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="167.9998779296875" prefWidth="250.0">
+              <children>
+                <ListView fx:id="homeTimeline" layoutX="0.0" layoutY="0.0" prefHeight="168.0" prefWidth="273.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="mentionTab" text="\@Mention">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+        <Tab fx:id="dmTab" text="DirectMessage">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+    <TextArea fx:id="tweetText" focusTraversable="true" layoutX="71.0" layoutY="33.0" opacity="1.0" prefHeight="38.0" prefWidth="200.00009999999747" promptText="いまなにしてる？" text="" wrapText="true" />
+    <Button fx:id="tweetButton" layoutX="220.0" layoutY="17.0" minHeight="16.0" mnemonicParsing="false" onAction="#onTweet" prefHeight="19.0" prefWidth="51.0" text="Tweet" textAlignment="LEFT">
+      <font>
+        <Font size="10.0" fx:id="x1" />
+      </font>
+    </Button>
+    <Label id="id" fx:id="screenId" layoutX="71.0" layoutY="20.0" text="\@guru_yuki_mew" textFill="GREY">
+      <font>
+        <Font name="System Italic" size="12.0" />
+      </font>
+    </Label>
+    <Label fx:id="name" layoutX="71.0" layoutY="1.0" prefHeight="15.999893188476562" text="かわいいアイコンと鬼畜眼鏡なYuki猫">
+      <font>
+        <Font name="System Bold" size="13.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>
